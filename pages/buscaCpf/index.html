@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Santa Helena Norte</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            zoom: 90%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="hospital-header">
+            <h1>Hospital Santa Helena Norte</h1>
+        </header>
+        
+        <!-- Formulário de Busca -->
+        <section class="form-section" id="searchSection">
+            <h2>Busca de Paciente</h2>
+            <div class="form-group">
+                <label for="searchCpf">CPF:</label>
+                <input type="text" id="searchCpf" name="searchCpf" placeholder="Digite o CPF do paciente" oninvalid="this.setCustomValidity('Por favor, preencha o CPF')" oninput="this.setCustomValidity('')">
+            </div>
+            <div class="form-actions" style="text-align: center;">
+                <button type="button" id="searchButton" class="btn-submit">Buscar</button>
+            </div>
+        </section>
+
+        <!-- Resultado da Busca -->
+        <section class="form-section" id="searchResultSection" style="display: none;">
+            <h2>Resultado da Busca</h2>
+            <div id="patientInfo"></div>
+            <div class="form-actions">
+                <button type="button" id="newSearchButton" class="btn-reset">Nova Busca</button>
+            </div>
+        </section>
+        
+        <!-- Divisória e botão para ir para a página de cadastro -->
+        <hr style="margin: 20px 0; border: 0; border-top: 1px solid #ddd;">
+        <p style="text-align: center; font-size: 14px; color: #666;">Outras opções</p>
+        <div style="text-align: center; margin-top: 15px;">
+            <a href="../cadastro/index.html" class="btn-submit" style="text-decoration: none; display: inline-block;">Cadastrar Paciente</a>
+        </div>
+    </div>
+
+    <!-- SweetAlert2 para mensagens informativas -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+</body>
+</html>

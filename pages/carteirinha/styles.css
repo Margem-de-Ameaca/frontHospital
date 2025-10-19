@@ -1,0 +1,255 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-image: url('../../images/clinical_background2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #23518C;
+    padding-bottom: 10px;
+}
+
+.hospital-header {
+    background-color: #f8f9fa;
+    padding: 15px 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hospital-header h1 {
+    color: #23518C;
+    margin: 0;
+    padding: 20px 0;
+    font-size: 2.2em;
+    text-align: center;
+}
+
+/* Estilos da carteirinha */
+.card-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.patient-card {
+    width: 100%;
+    max-width: 600px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+.card-header {
+    background-color: #23518C;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.logo h2 {
+    color: #23518C;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.title {
+    flex-grow: 1;
+}
+
+.title h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.title p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.card-body {
+    padding: 20px;
+    display: flex;
+}
+
+.patient-photo {
+    width: 120px;
+    margin-right: 20px;
+}
+
+.photo-placeholder {
+    width: 120px;
+    height: 150px;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+    font-size: 14px;
+    border: 1px dashed #bbb;
+}
+
+.patient-info {
+    flex-grow: 1;
+}
+
+.info-row {
+    display: flex;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.info-label {
+    width: 40%;
+    font-weight: 600;
+    color: #23518C;
+}
+
+.info-value {
+    width: 60%;
+    color: #333;
+}
+
+.card-footer {
+    background-color: #f5f5f5;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #ddd;
+}
+
+.status-badge {
+    background-color: #2ecc71;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.status-badge.inactive {
+    background-color: #e74c3c;
+}
+
+.card-id {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Estilos dos botões de ação */
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.btn-action {
+    padding: 12px 24px;
+    background-color: #23518C;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: #23518C;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn-action:hover {
+    background-color: #1d5399;
+    transform: translateY(-2px);
+}
+
+.btn-primary:hover {
+    background-color: #1a3f6d;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .card-body {
+        flex-direction: column;
+    }
+    
+    .patient-photo {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .info-row {
+        flex-direction: column;
+    }
+    
+    .info-label, .info-value {
+        width: 100%;
+    }
+    
+    .actions {
+        flex-direction: column;
+    }
+    
+    .btn-action {
+        width: 100%;
+        text-align: center;
+    }
+}
