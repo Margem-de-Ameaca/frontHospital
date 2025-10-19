@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Criação de Conta</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Criação de Conta</h1>
+        <form id="accountForm">
+            <!-- Primeira Seção: Dados da Conta -->
+            <section class="form-section">
+                <h2>Dados da Conta</h2>
+                <div class="form-group">
+                    <label for="username">Usuário:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required>
+                    <div class="password-strength">
+                        <div class="strength-bar">
+                            <div class="strength-progress" id="strength-progress"></div>
+                        </div>
+                        <p class="strength-text" id="strength-text">Força da senha</p>
+                    </div>
+                    <div class="password-tips">
+                        <p>Dicas para uma senha forte:</p>
+                        <ul>
+                            <li id="uppercase">Pelo menos uma letra maiúscula</li>
+                            <li id="special">Pelo menos um caractere especial</li>
+                            <li id="number">Pelo menos um dígito numérico</li>
+                            <li id="length">Mínimo de 8 caracteres</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirmar Senha:</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                    <p id="password-match" class="validation-message"></p>
+                </div>
+            </section>
+
+            <!-- Segunda Seção: Dados Pessoais -->
+            <section class="form-section">
+                <h2>Dados Pessoais</h2>
+                <div class="form-group">
+                    <label for="fullname">Nome Completo:</label>
+                    <input type="text" id="fullname" name="fullname" required>
+                </div>
+                <div class="form-group">
+                    <label for="birthdate">Data de Nascimento:</label>
+                    <input type="date" id="birthdate" name="birthdate" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefone:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="(XX) XXXXX-XXXX" required>
+                </div>
+            </section>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-submit">Criar Conta</button>
+                <button type="reset" class="btn-reset">Limpar</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
